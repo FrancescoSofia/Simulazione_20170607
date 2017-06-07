@@ -28,17 +28,12 @@ public class Match {
 	 * @param ftag
 	 * @param ftr
 	 */
-	public Match(int id, Season season, String div, LocalDate date, Team homeTeam, Team awayTeam, int fthg, int ftag,
-			String ftr) {
+	public Match(int id, Season season, Team homeTeam, Team awayTeam,String ftr) {
 		super();
 		this.id = id;
 		this.season = season;
-		this.div = div;
-		this.date = date;
 		this.homeTeam = homeTeam;
 		this.awayTeam = awayTeam;
-		this.fthg = fthg;
-		this.ftag = ftag;
 		this.ftr = ftr;
 	}
 
@@ -194,6 +189,12 @@ public class Match {
 		if (id != other.id)
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Match [id=" + id + ", season=" + season + ", homeTeam=" + homeTeam + ", awayTeam=" + awayTeam + ", ftr="
+				+ ftr + "]";
 	}
 	
 	
